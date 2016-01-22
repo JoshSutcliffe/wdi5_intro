@@ -1,0 +1,20 @@
+<ul>
+  
+  <% @dish_types.each do |dish_type|  %>
+    <li><a href="/?dish_type_id=<%= dish_type['id'] %>"><%= dish_type['name'] %></a></li>
+  <% end %>
+
+</ul>
+
+<h1>Good Food Hunting</h1>
+
+<% @dishes.each do |dish| %>
+  <p>
+    <a href="/dishes/<%= dish['id'] %>"><%= dish['name'] %></a>
+    <br>
+    <%= dish['venue'] %>
+  </p>
+  <img src="<%= dish['image_url'] %>" alt="">
+<% end %>
+
+<a href="/dishes/new">Would You like to add a new dish?</a>

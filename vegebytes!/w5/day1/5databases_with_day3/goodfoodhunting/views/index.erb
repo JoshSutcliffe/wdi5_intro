@@ -1,0 +1,40 @@
+<ul>
+  <li><a href="/">All</a></li>
+  <% @dish_types.each do |dish_type|  %>
+    <li><a href="/?dish_type_id=<%= dish_type.id %>"><%= dish_type.name %></a></li>
+  <% end %>
+
+</ul>
+
+<% @dishes.each do |dish| %>
+
+  <div class="card">
+    <div><img src="<%= dish.image_url %>" alt=""></div>
+      <a href="/dishes/<%= dish.id %>">
+        <%= dish.name %>
+      </a>
+      <p><%= dish.venue %></p>
+      <p><%= dish.dish_type.name if dish.dish_type %></p>
+          <!-- Above goes through the DB using AR
+    .find finds the parameters in the tables. Goes through dish_type.rb and dish.rb links the tables and prints whats int the dish_type_id table -->
+    <p><%= dish.likes.count %></p>
+    <!-- Above counts the likes -->
+      <form action="/likes" method="post">
+        <input type="hidden" name="dish_id" value="<%= dish.id %>">
+        <button>Like</button>
+      </form>
+      <!-- Making a from for the Like button -->
+      <!-- Also need somewhere to display the amount of likes -->
+      <!-- Also on list's of diferent type of dishes -->
+      
+      <form action="/likes" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="dish_id" value="<%= dish.id %>">
+        <button>Unlike</button>
+      </form>
+  </div>
+ 
+<% end %>
+
+<a href="/dishes/new">Would You like to add a new dish?</a>
+

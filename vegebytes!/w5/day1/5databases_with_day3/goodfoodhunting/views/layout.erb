@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Hello World</title>
+</head>
+<body>
+    <%= session[:user_id] %>
+<!--   <% #if User.find_by(id: session[:user_id]) %> -->
+<!-- the above can be done with helpers, like below -->
+  <% if logged_in? %>
+  <!-- Above is the if statement for the login/logout button -->
+    <form action="/session" method="post">
+      <!-- Browser only knows post and get - have to add a value in the input -->
+      <input type="hidden" name="_method" value="delete">
+      <button>Log Out</button>
+    </form>
+    log in as <%= current_user.email %>
+
+  <% end %>
+
+  <!-- Adds the banner from the other page, good for complex layouts -->
+  <%= erb :banner %>
+
+  <%= yield %>
+
+</body>

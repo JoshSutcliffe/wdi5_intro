@@ -1,0 +1,7 @@
+<h1>Your Movies</h1>
+
+<div id="about-wrapper">
+<% @result.each do |movie| %>
+    <p><a href="/show/<%= movie['imdbID'] %>"><%= movie['Title'] %></a>
+<% end %>
+</div>

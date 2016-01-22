@@ -1,0 +1,13 @@
+img {
+  max-width: 100%;
+}
+
+ul li {
+  display: inline-block;
+}
+
+.card {
+  float: left;
+  width: 25%;
+}
+

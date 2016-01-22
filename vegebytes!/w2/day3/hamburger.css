@@ -1,0 +1,74 @@
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.home, .order, .about-us {
+  min-height: 100px;
+  float: left;
+  width: 96.666666%;
+/*  margin-right: 3.333333%;
+*/}
+
+.home {
+  background-color: yellow;
+}
+
+.order {
+  background-color: red;
+}
+
+.about-us {
+  background-color: blue;
+}
+
+@media all and (min-width: 37em) {
+    .container {
+    max-width: 25em;
+  }
+  .home, .order, .about-us {
+    width: 32.222222%;
+  }
+}
+
+@media all and (min-width: 55em) {
+/*  .home, .order, .about-us {
+    width: 32.222222%;
+  } this put one in a line, but not all 
+  .container {
+    max-width: 600px;
+  }*/
+  .container {
+    max-width: 37em;
+  }
+  .home, .order, .about-us {
+    width: 32.222222%;
+  }  
+}
+
+/*body { background-color: black; height: 100%; }
+h3 { color: white; }
+#nav-toggle span { position: absolute; left: 50%; top: 50%; }
+
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px; 
+}
+
+
+
+

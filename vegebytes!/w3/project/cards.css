@@ -1,0 +1,13 @@
+#container {
+  max-width: 300px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+img {
+  min-height: 100px;
+  float: left;
+  width: 48%;
+  border: solid black 1px;
+  height: 146px;
+}

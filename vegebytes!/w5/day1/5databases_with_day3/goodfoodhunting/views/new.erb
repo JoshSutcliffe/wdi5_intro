@@ -1,0 +1,36 @@
+<%= @dish.errors.full_messages %>
+<!-- Stopping the input of bad dtata and showing the error message -->
+
+<form action="/dishes" method="post">
+  <!-- Above tells the form which page to go to - 
+  because /dishes is a post, you have to state a method -->
+  <label for="">Name</label>
+  <input type="text" name="name">
+
+  <label for="">Image URL</label>
+  <input type="text" name="image_url">
+
+  <label for="">Venue</label>
+  <input type="text" name="venue">
+  <!-- Input for venue doesn't go into the DB -->
+
+  <label for="dish-type">Your Dish Type</label>
+  <select name="dish_type_id" id="">
+
+    <!-- We are using a ruby for loop to go through the options. -->
+  
+    <% @dish_types.each do |dish_type| %>
+      
+      <%if dish_type['id'] == @dish['dish_type_id'] %>
+
+        <option value="<%= dish_type['id'] %>" selected>  
+          <%= dish_type['name'] %>
+        </option>
+      <% end %>
+
+    <% end %>
+  </select>
+
+  <button>Submit</button>
+</form>
+

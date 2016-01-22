@@ -1,0 +1,60 @@
+/* asterix applies to everything in the page
+* {
+  
+}
+*/
+
+/* searching by tags */
+
+h1 {
+  background-color: tomato;
+}
+
+/* searchijg by id */
+
+#main-title {
+  color: white;
+}
+
+/* searching by classes */
+
+.number2 {
+  background-color: #777;
+  font-size: 30px;
+}
+
+.very-important {
+  color: linen;
+}
+
+/* within search for all li */
+.my-list li {
+  text-decoration: underline;
+}
+
+/* how to select all the p tags in the main
+main p {
+  background-color: pink;
+}
+*/
+
+/* direct chile selector - this will override more generic
+ slectors like the one above */
+main > p {
+  background-color: blue;
+}
+
+/* pseudo selector - anything that changes something temporarily*/
+h3:hover {
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+

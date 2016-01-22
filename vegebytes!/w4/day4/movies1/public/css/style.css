@@ -1,0 +1,125 @@
+/* Need to do:
+  Align text and poster in full screen size
+  add shadow to img
+  if its a long title it do
+*/
+
+body {
+  background: linear-gradient(to bottom right, black, grey);
+  height: 100vh;
+/* height or width 100vh or vw will cover viewport */
+  background-attachment: fixed;
+}
+
+#wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#index-page > h1 {
+  padding-top: 200px;
+}
+
+#about-wrapper > p {
+  font-family: 'UpperEastSide';
+  text-shadow: -10px -8px 15px black;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+#show-wrapper > h1, h2, h3 {
+  text-shadow: -10px -8px 5px black;
+}
+
+h1, h2, h3 {
+  font-family: 'Betty Noir';
+  text-shadow: -15px -20px 10px black;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+img {
+  box-shadow: -10px -8px 5px black;
+}
+
+p {
+  font-family: 'UpperEastSide';
+  text-shadow: -10px -8px 5px black;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+input, button {
+  box-shadow: -15px -20px 15px black;
+}
+
+a {
+  color: white;
+  font-family: 'UpperEastSide';
+}
+
+a:hover {
+  font-style: italic;
+}
+
+@media all and (min-width: 55em) {
+
+  #wrapper {
+    max-width: 80vw;
+  }
+
+  #index-page > h1 {
+    padding-top: 150px;
+    padding-bottom: 60px;
+    font-size: 70px;
+    text-shadow: -60px -60px 8px black;
+  }
+
+  input, button {
+    box-shadow: -60px -40px 8px black;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Betty Noir';
+    text-shadow: -40px -40px 3px black;
+  }
+
+  #about-wrapper > p {
+    text-shadow: -40px -40px 3px black;
+    font-size: 35px;
+    line-height: 40px;
+    padding-bottom: 40px;
+  }
+
+  #show-wrapper > h1, h2, h3 {
+    text-shadow: -30px -30px 3px black;
+    line-height: 40px;
+  }
+
+  #show-img {
+    width: 40%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+
+  #show-text {
+    width: 58%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+  }
+
+  img {
+    box-shadow: -10px -8px 5px black;
+  }
+}
+
+

@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0px 90px 0px 20px;
+}
+
+h1 {
+  color: grey;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: darkSlateGray;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  font-size: 20px
+}
+
+h3 {
+  color: dodgerBlue;
+  font-size: 13px;
+}
+
+p {
+  color: grey;
+  font-size: 13px;
+}
+
+span {
+  color: dodgerBlue;
+  margin: 0px;
+}
+
+.footer-photos1{
+  margin: 10px 0.1px 10px 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: lightGrey; 
+  box-sizing: border-box;
+}
+
+.footer-photos {
+  border-style: solid;
+  border-width: 5px;
+  border-color: lightGrey; 
+  margin: 10px 0.1px 10px 0.1px;
+  box-sizing: border-box;
+}
+
+footer {
+  margin-bottom: 15px;
+  color: grey;
+  font-size: 13px;
+}

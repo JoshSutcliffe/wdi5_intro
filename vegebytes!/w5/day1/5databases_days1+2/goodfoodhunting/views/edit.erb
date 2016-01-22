@@ -1,0 +1,38 @@
+<h1>Your are going to edit the <%= @dish['name'] %> entry</h1>
+
+<form action="/dishes/<%= @dish['id'] %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <!-- the input above is because it is a put request -->
+  <label for="">Name</label>
+  <input type="text" name="name" value="<%= @dish['name'] %>">
+
+  <label for="">Image URL</label>
+  <input type="text" name="image_url" value="<%= @dish['image_url'] %>">
+
+  <label for="">Venue</label>
+  <input type="text" name="venue" value="<%= @dish['venue'] %>">
+
+  <label for="dish-type">Your Dish Type</label>
+  <select name="dish_type_id" id="">
+
+    <!-- We are using a ruby for loop to go through the options. -->
+  
+    <% @dish_types.each do |dish_type| %>
+      
+      <%if dish_type['id'] == @dish['dish_type_id'] %>
+
+        <option value="<%= dish_type['id'] %>" selected>  
+        <!-- selected means if it has a value, it will be on that one to start with -->
+          <%= dish_type['name'] %>
+        </option>
+      <% else %>
+        <option value="<%= dish_type['id'] %>">  
+          <%= dish_type['name'] %>
+        </option>
+      <% end %>
+
+    <% end %>
+  </select>
+
+  <button>Submit</button>
+</form>

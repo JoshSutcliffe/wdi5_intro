@@ -1,0 +1,15 @@
+<h1><%= @dish['name'] %></h1>
+
+<h3><%= @dish['venue'] %></h3>
+
+<img src="<%= @dish['image_url'] %>" alt="">
+
+<a href="/dishes/<%= @dish['id'] %>/edit">Edit Dish</a>
+<!-- links always do get requests, they should always be safe -->
+
+<form action="/dishes/<%= @dish['id'] %>" method="post">
+  <!-- have to add post as the method, despit it being a delete request -->
+  <!-- The input type below gets around this, this is a sinatra framework -->
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete</button>
+</form>

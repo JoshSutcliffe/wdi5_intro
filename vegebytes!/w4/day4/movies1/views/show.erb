@@ -1,0 +1,29 @@
+<div id="show-wrapper">
+  <h1><%= @imdbid_result["title"] %></h1>
+
+  <h2>By <%= @imdbid_result["director"] %></h2>
+  <h3><%= @imdbid_result["year"] %> </h3>
+
+  <p><%= @imdbid_result["plot"] %></p> <br>
+
+  <div id="show-img">
+    <img src="<%= @poster %>" alt="Film Poster">
+  </div>
+
+  <div id="show-text">
+    <p><%= "Actors: #{@imdbid_result["actors"]}" %>  
+      <br>
+      <br>
+    <%= "Awards: #{@imdbid_result["awards"]}" %> 
+      <br>
+      <br>
+    <%= "Writers: #{@imdbid_result["writer"]}. " %> 
+      <br>
+      <br>
+    <%= "Genre: #{@imdbid_result["genre"]}. " %> 
+      <br>
+      <br>
+    <%= "IMDB Rating: #{@imdbid_result["imdbrating"]}." %></p>
+  </div>
+</div>
+

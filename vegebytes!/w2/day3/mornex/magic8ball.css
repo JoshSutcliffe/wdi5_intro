@@ -1,0 +1,21 @@
+#container {
+  width: 301px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  margin: 0 auto;
+}
+
+#users-fate {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+/** {
+  margin: 0px 80px;
+}
+*/

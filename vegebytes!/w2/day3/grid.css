@@ -1,0 +1,51 @@
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.span-1, .span-2, .span-3 {
+  min-height: 100px;
+  margin-right: 3.333333%; /* 10px; */ 
+  float: left;
+  width: 96.666666%
+}
+
+.span-1 {
+  background-color: pink;
+  /*width: 30%;*/ /* 90px; */
+}
+
+.span-2 {
+  background-color: plum;
+  /*width: 63.333333%;*/ /* 190px; 
+*/}
+
+.span-3 {
+  background-color: linen;
+  /*width: 96.666666%;*/ /* 290px; */
+}
+
+img {
+  float: left;
+  max-width: 100%; /* allows images to respond */
+}
+
+@media all and (min-width: 20em) {
+  .span-1 {
+    width: 30%;
+  }
+  .span-2 {
+    width: 63.333333%;
+  }
+}
+
+@media all and (min-width: 55em) {
+  body {
+    background-color: yellow;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,41 @@
+.box {
+  height: 50px;
+}
+
+.box-a {
+  background-color: plum;
+  /* display: block; default for a div element */
+  display: inline;
+}
+
+.box-b {
+  background-color: tomato;
+  padding: 10px;
+  margin: 10px;
+}
+
+.box-c {
+  background-color: pink;
+}
+
+/* this is the basics of the box model. */
+
+/* css tricks */
+
+.hide {
+  visibility: hidden;
+  display: none;
+}
+
+.show-inline {
+  display: inline;
+}
+
+.show-block {
+  display: block;
+}
+
+.show-inline-block {
+  display: inline-block;
+  width: 200px;
+}

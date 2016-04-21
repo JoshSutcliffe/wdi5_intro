@@ -1,0 +1,14 @@
+<form action="/admin/dishes" method="post">
+  <!-- Below is a form secutiry check in rails -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="">Name</label>
+  <input type="text" name="name">
+
+  <label for="">Image URL</label>
+  <input type="text" name="image_url">
+
+  <label for="">Venue</label>
+  <input type="text" name="venue">
+
+  <button>Submit</button>
+</form>

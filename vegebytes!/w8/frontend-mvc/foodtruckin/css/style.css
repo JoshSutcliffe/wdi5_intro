@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+}
+
+.trucks {
+  background-color: red;
+  flex: 4;
+  overflow-y: scroll;
+  /* This makes one side of the page vertically */
+  height: 100vh;
+  position: relative;
+}
+
+.map {
+  background-color: yellow;
+  flex: 3;
+  height: 100vh;
+  /* vh is great as the map will always be full height */
+}
+
+.ui-card {
+  width: 49%;
+  float: left;
+  margin: 0% 1% 1% 0%;
+  background-color: orange;
+}
+
+/* Making a slider is a three step process */
+.slider {
+  /* need to hide the images outside outside the current card */
+  overflow: hidden;
+  position: relative;
+  /* if the image gets too big it will look shite */
+  max-width: 500px;
+  width: 100%;
+}
+
+/* start here */
+.slider-wrapper {
+  /* width 200% is because theres 2 images - just increase by 100 per image */
+  width: 200%;
+  position: relative;
+  /* needs a base position where to start */
+  left: 0;
+  transition: 2s;
+}
+
+.slider-wrapper img {
+  /* width 50% of the images puts them side by side */
+  width: 50%;
+  height: auto;
+  float: left;
+}
+
+.load-more {
+  clear: left;
+  /* clears the float so it doesnt float to the right if theres odd ui cards */
+  background-color: plum;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.load-more h1 {
+  text-align: center;
+}
+
+.content {
+  padding: 1em;
+}
+
+
+
+

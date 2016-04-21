@@ -12,11 +12,11 @@ require './models/like'
 # The loop will load all the commented files above
 
 
-# configure :development do |c|
+configure :development do |c|
   require 'pry'
   require 'sinatra/reloader'
-#   c.also_reload './models/*'
-# end
+  c.also_reload './models/*'
+end
 # This shows the things that are only in use in development mode - are ignored when site goes live
 
 binding.pry
@@ -102,9 +102,11 @@ post '/dishes' do
   @dish.image_url = params[:image_url]
   @dish.dish_type_id = params[:dish_type_id]
   if @dish.save # This is all using active record
+    # @dish.save checks if there are error messages in the inputs from the user
     redirect to '/'
   else
     @dish_types = DishType.all
+    # Above is a variable that lists a dropdown box, so it has to be taken over again
     erb :new
   end
 
@@ -182,32 +184,7 @@ post '/likes' do
   if like.save
     redirect to '/'
   end
-  # Above is all examples of association creation
 
-  # params[:dish_id]
-
-  # current_user.id
-
-  # Like.create(user_id: current_user.id dish_id: params[:dish_id])
-  # Above is one way to create the record
-
-#   Writing if else statements for the like button
-#   if session[:user_id] # Check if someone is logged in
-#     if Like.where(user_id:)
-#     # something to check if you are logged in - if session?
-#     # nested if - need to check if they have liked already first
-#       do nothing
-#         if connect to db - add record to db, both user id and dish id
-#           @likes = Like.new
-#           @likes.dish_id = params[:id]
-#           @likes.user_id = session[:user_id]
-#           @likes.save
-#         end
-#   else
-#     error message: only members can like
-#   end
-
-#   redirect to '/'
 end
 
 # Deleting a like

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>foodtruck.in</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main>
+    
+  </main>
+
+  <script id="index-template" type="text/x-underscore-template">
+    <div class="trucks">
+
+      <div class="list">
+
+      </div>
+
+      <div class="load-more content">
+        <h1>Load More</h1>
+      </div>
+
+    </div>
+
+    <div class="map">maps</div>
+    </div>
+  </script>
+  
+  <script id="details-template" type="text/x-underscore-template">
+    <h1>{{ name }}</h1>
+  </script>
+
+  <script id="truck-item-template" type="text/x-underscore-template">
+    <div class="slider">
+      <div>&hearts;</div>   
+      <div class="slider-wrapper">
+        <img src="https://www.placecage.com/c/960/638" alt="">
+        <img src="{{ image_url }}" alt="">
+      </div>
+    </div>
+      
+    <div>
+      <h2><a href="#trucks/{{ id }}">{{ name }}</a></h2>
+      <div>0</div>
+    </div>
+  </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNSo81LuZfeLtRSyNLfH4kvznoPBWlhRo"></script>
+  
+  <script src="js/router.js"></script>
+  <script src="js/dish.js"></script>
+  <script src="js/dishes.js"></script>
+    <script src="js/indexView.js"></script>
+    <script src="js/detailsView.js"></script>
+  <script src="js/truckItemView.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

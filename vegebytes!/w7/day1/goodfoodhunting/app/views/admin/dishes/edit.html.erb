@@ -1,0 +1,13 @@
+<form action="/admin/dishes/<%= @dish.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <!-- Below is a form secutiry check in rails -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label for="">Name</label>
+  <input type="text" name="name" value="<%= @dish.name %>">
+
+  <label for="">Venue</label>
+  <input type="text" name="venue" value="<%= @dish.venue %>">
+
+  <button>Submit</button>
+</form>

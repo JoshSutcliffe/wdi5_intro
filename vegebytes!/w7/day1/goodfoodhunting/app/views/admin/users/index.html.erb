@@ -1,0 +1,22 @@
+<h2>Users</h2>
+
+<a href="/admin/users/new">Create a User</a>
+
+<% @users.each do |user| %>
+  <div><a href="/admin/users/<%= user.id %>"><%= user.name %></a></div>
+
+  <form action="/admin/users/<%= user.id %>/edit" method="get">
+    <!-- Below is a form secutiry check in rails -->
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <button>Edit</button>
+  </form>
+
+  <form action="/admin/users/<%= user.id %>" method="post" >
+    <input type="hidden" name="_method" value="delete" value="<%= user.id %>">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    
+    <button>Delete</button>
+  </form>
+
+<% end %>

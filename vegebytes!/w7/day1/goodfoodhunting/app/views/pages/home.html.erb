@@ -1,0 +1,32 @@
+<!-- This has been copied from the api home page -->
+
+  <!-- Putting markup in a script tag will be hidden but can be used to add markup to the page - using underscore -->
+  <script id="dish-template" type="text/x-underscore-template">
+    <div class="ui-card" data-id="{{ id }}">
+      <header class="content">
+        <div class="right">timestamp</div>
+        <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97200&w=200&h=200" alt="" class="avatar">Username
+      </header>
+      
+      <div class="image">
+        <img src="{{ image_url }}" alt="">
+        <span class="like">&hearts;</span>
+      </div>
+      
+      <div class="content">
+        <h2><a href ="/dishes/{{ id }}"{{ name }}</a></h2>
+        <h4>{{ venue }}</h4>
+      </div>
+
+      <div class="content">
+        <span class="right counter">{{ counter }}</span>
+        bookmark
+
+      </div>
+    </div>
+  </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+</body>
+</html>

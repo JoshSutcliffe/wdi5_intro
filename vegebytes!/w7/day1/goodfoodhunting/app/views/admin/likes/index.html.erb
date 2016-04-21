@@ -1,0 +1,8 @@
+<!-- This is where the route is driected to -->
+<h2>Likes</h2>
+
+<h4>Total current likes: <%= @likes.count %></h4>
+
+<% @likes.each do |like| %>
+  <p>Like number: <%= like.id %>, was created at <%= like.created_at %></p>
+<% end %>

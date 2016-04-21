@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goodfoodhunting</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <nav class="content">
+      <ul>
+        <li><%= link_to 'Dashboard', admin_root_path %></li>
+        <!-- above is a ruby shortcut for a link. root_path is a function for the home page -->
+        <li><a href="/admin/dishes">Dishes</a></li>
+        <li><a href="/admin/users">Users</a></li>
+        <li><a href="/admin/likes">Likes</a></li>
+      </ul>
+      <!-- To use inline blocks to align, you have to put the closing and ending tags on the same line -->
+    </nav><main class="content">
+
+      <%= yield %>
+    </main>
+
+  </div>
+
+</body>
+</html>

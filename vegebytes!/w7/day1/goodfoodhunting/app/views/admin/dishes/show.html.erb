@@ -1,0 +1,24 @@
+<p><%= @dish.name %></p>
+
+<img src="<%= @dish.image_url %>" alt="">
+
+<form action="/admin/dishes/<%= @dish.id %>/edit" method="get">
+  <!-- Below is a form secutiry check in rails -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button>Edit</button>
+</form>
+
+<form action="/admin/dishes/<%= @dish.id %>" method="post" >
+  <input type="hidden" name="_method" value="delete" value="<%= @dish.id %>">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  
+  <button>Delete</button>
+</form>
+
+<p>Total likes: <%= @dish.likes.count %></p>
+
+<% @dish.likes.each do |like| %>
+  <p>Like number: <%= like.id %>, was created at <%= like.created_at %></p>
+<% end %>
+

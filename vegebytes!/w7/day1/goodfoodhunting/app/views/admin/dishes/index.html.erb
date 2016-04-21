@@ -1,0 +1,25 @@
+<!-- This is where the route is driected to -->
+<h2>Dishes</h2>
+
+<%= link_to 'New Dish', new_admin_dish_path %>
+<!-- Abov is a rails helper - use /rails/info for the paths you have available -->
+
+<% @dishes.each do |dish| %>
+  <!-- <div><a href="/dishes/<%= dish.id %>"><%= dish.name %></a> -->
+  <!-- below is the same as above -->
+  <div class="row">
+    <p>Dish name: <%= link_to dish.name, "/admin/dishes/#{dish.id}"%>. Venue: <%= dish.venue %></p>
+  <form action="/admin/dishes/<%= dish.id %>/edit" method="get">
+    <!-- Below is a form secutiry check in rails -->
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <button>Edit</button>
+  </form>
+
+  <form action="/admin/dishes/<%= dish.id %>" method="post" >
+    <input type="hidden" name="_method" value="delete">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <button>Delete</button>
+  </form>
+  </div>
+
+<% end %>

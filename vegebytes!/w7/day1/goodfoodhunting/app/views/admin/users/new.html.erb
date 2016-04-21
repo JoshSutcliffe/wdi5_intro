@@ -1,0 +1,16 @@
+<form action="/admin/users" method="post">
+  <!-- Below is a form secutiry check in rails -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="">Name</label>
+  <input type="text" name="user[name]">
+  <!-- adding the user[name] like above creates a nested hash to get it from. This can be done for multiple things -->
+  <button>Submit</button>
+</form>
+
+<!-- Example of form helper below -->
+
+<%#= form_for [:admin, @user] do |f| %>
+  <%#= f.label :email %>
+  <%#= f.text_field :email %>
+  <!-- <button>submit</button> -->
+<%# end %>

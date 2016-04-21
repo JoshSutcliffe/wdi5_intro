@@ -1,0 +1,13 @@
+<h2><%= @user.name %></h2>
+
+<form action="/admin/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" value="<%= @user.id %>">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button>Delete</button>
+</form>
+
+<form action="/admin/users/<%= @user.id %>/edit" method="get">
+  <!-- Below is a form secutiry check in rails -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button>Edit</button>
+</form>

@@ -1,0 +1,65 @@
+/* the box sizing model makes it always that size */
+* { box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Commented out to use flex */
+/*.container > * {
+  display: inline-block;
+  vertical-align: top;
+}*/
+
+/* Flex alone changes the heights of the two elements to match */
+.container {
+  display: flex;
+  /* this flex swaps the container from side to side to top to bottom */
+  /*flex-direction: column;*/
+}
+
+nav {
+  background-color: green;
+/*  width: 30%;*/
+/* You can use flex to do widths and it works the percentage out for you*/
+  flex: 1;
+  /* min-height makes the vh dynamics */
+  min-height: 100vh;
+  /* below swaps the order of things - left to right */
+  /*order: 1;*/
+}
+
+nav li {
+  list-style: none;
+  margin-bottom: 5px;
+  background-color: tomato;
+}
+
+main {
+  background-color: tomato;
+  /*width: 70%;*/
+  flex: 5;
+}
+
+img {
+  width: 100%;
+}
+
+.content {
+  padding: 1em;
+}
+
+.top-nav {
+  background-color: plum;
+}
+
+
+
+
+

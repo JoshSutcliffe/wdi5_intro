@@ -1,0 +1,85 @@
+/* DT */
+
+main {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ui-card {
+/*  float: left;*/
+/*  width: 25%;*/
+  background-color: pink;
+  width: 24%;
+  margin: 0.5%;
+  border-radius: 8%;
+  box-shadow: 0px 0px 3.5px;
+}
+
+.ui-card header {
+  line-height: 2em; 
+}
+
+.right {
+  float: right;
+}
+
+.image {
+  position: relative;
+}
+
+/* Below is how to target a different CSS element*/
+.image:hover .like {
+  /*display: block;*/
+  opacity: 1;
+}
+
+.like {
+  /*display: none;*/
+  user-select: none;
+  -webkit-user-select: none;
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+  right: 2px;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+  /*display: none;*/
+  opacity: 0;
+}
+
+.like:hover {
+  color: yellow;
+}
+
+.content {
+  padding: 1em;
+}
+
+.avatar {
+  width: 2em;
+  border-radius: 2em;
+  height: 2em; /* 2em matches the image size */
+  vertical-align: middle;
+}
+
+.top-nav {
+  background-color: plum;
+  height: 3em;
+  position: fixed;
+  width: 100%;
+  /* to do a fixed position, it has to be offset like below */
+  top: 0;
+  z-index: 5;
+  transition: 1.5s;
+}
+
+.mini {
+  height: 1em;
+}
+
+
+
+
+

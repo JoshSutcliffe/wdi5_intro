@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.xmen {
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Mona Shark";
+  text-align: center;
+}
+
+/*.list {
+  flex: 4;
+}*/
+
+.xmen-card {
+  float: left;
+  width: 31%;
+  margin: 0% 1% 1% 0%;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  max-width: 500px;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 200%;
+  position: relative;
+  right: 0;
+  transition: 2s;
+}
+
+.slider-wrapper img {
+  width: 50%;
+  height: 220px;
+  float: left;
+}

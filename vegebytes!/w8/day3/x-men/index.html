@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>X-Men</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    
+    <div class="xmen">
+      <h1>Xavier's Institute of Higher Learning</h1>
+      <div class="list">
+        
+      </div>
+
+    </div>
+
+    <div class="load-more content">
+      <h4>Load More</h4>
+    </div>
+
+  </div>
+
+  <script id="xmen-item-template" type="text/x-underscore-template">
+    <div class="slider">
+      <div class="slider-wrapper">
+        <img src="{{ image1 }}" alt="">
+        // <img src="{{ image2 }}" alt="">
+        <h2>{{ phrase }}</h2>
+        <img src=""><h2>{{ name }}'s ability is {{ ability }}</h2>
+      </div>
+    </div>
+
+    <div>
+      <h2>{{ name }}</h2>
+      <h2>likes num</h2>
+    </div>
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+
+  <script src="js/xmenitemview.js"></script>
+  <script src="js/protagonists.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

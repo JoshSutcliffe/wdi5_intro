@@ -1,0 +1,10 @@
+<form action="/admin/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <!-- Below is a form secutiry check in rails -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label for="">Name</label>
+  <input type="text" name="user[name]" value="<%= @user.name %>">
+
+  <button>Submit</button>
+</form>
